@@ -2,7 +2,13 @@
 
 This project formalizes the manuscript Representations and dilations of operator-valued measures. The source and Lean SHA-256 hashes are in KernelAudit.txt.
 
-The project formalizes the manuscript results through Section 7. Each checked theorem has a Lean proof. The audit permits the standard Lean axioms propext, Classical.choice, and Quot.sound, together with the named literature axioms listed in ManuscriptCoverage.md. KernelAudit.txt lists the transitive dependencies for each audited result. The statements use real Banach spaces where completeness is needed, measurable sets, norm-continuous duals and biduals, and the manuscript's norm-topology countable additivity and localization conditions.
+The project formalizes the manuscript results through Section 7. The statements use real Banach spaces where completeness is needed, measurable sets, norm-continuous duals and biduals, and the manuscript's norm-topology countable additivity and localization conditions.
+
+## Axiom disclosure
+
+Lean 4 checks the formalized proofs relative to the standard Lean axioms `propext`, `Classical.choice`, and `Quot.sound`, together with the external results explicitly declared as axioms in [`Paper.lean`](Paper.lean). The project declares 70 such results from textbooks and the cited literature. The [cited-axiom table](ManuscriptCoverage.md#cited-axioms) identifies the results and their sources.
+
+The recorded audit checks the transitive axiom dependencies of 620 declarations. Every recorded dependency is among the standard axioms and the listed external results. The audited declarations have no `sorryAx` dependency. See [`KernelAudit.txt`](KernelAudit.txt) for the per-declaration dependencies and [`check.ps1`](check.ps1) to rerun the audit on Windows.
 
 ## Reproduce
 
