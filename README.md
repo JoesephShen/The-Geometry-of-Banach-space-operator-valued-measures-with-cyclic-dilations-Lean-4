@@ -10,6 +10,10 @@ Lean 4 checks the formalized proofs relative to the standard Lean axioms `propex
 
 The recorded audit checks the transitive axiom dependencies of 620 declarations. Every recorded dependency is among the standard axioms and the listed external results. The audited declarations have no `sorryAx` dependency. See [`KernelAudit.txt`](KernelAudit.txt) for the per-declaration dependencies and [`check.ps1`](check.ps1) to rerun the audit on Windows.
 
+## AI assistance
+
+GPT 6.2 Sol assisted with generating and reviewing the Lean 4 formalization. Lean 4 checked the resulting formal proofs under the axiom dependencies described above.
+
 ## Reproduce
 
 Lean version 4.36.0 and mathlib revision fc4f59e577feb1a4956671bc04ac18aaaf8cd842 are pinned. In the project directory:
